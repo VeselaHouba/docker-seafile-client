@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install gnupg -y && \
     apt-get install -y seafile-cli procps curl grep && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
+RUN curl https://raw.githubusercontent.com/haiwen/seafile/master/app/seaf-cli > /usr/bin/seaf-cli
 
 WORKDIR /seafile-client
 
